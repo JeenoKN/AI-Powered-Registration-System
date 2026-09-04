@@ -1,4 +1,4 @@
-AI-Powered Registration & Dynamic Form System
+## AI-Powered Registration & Dynamic Form System
 
 A full-stack senior project that uses AI to generate and manage dynamic registration forms from multiple input formats, including text, images, documents, and audio.
 
