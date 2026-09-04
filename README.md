@@ -141,5 +141,5 @@ Bachelor of Engineering in Computer Engineering
 
 ## Author
 
-**Treemonrapat Vichisri**  
+**Treemonrapat Vichaisri**  
 Computer Engineering Student
