@@ -1,12 +1,8 @@
-# NewSystem
+AI-Powered Registration & Dynamic Form System
 
-NewSystem is an IAM-integrated agreement management system for MFU. It includes:
+A full-stack senior project that uses AI to generate and manage dynamic registration forms from multiple input formats, including text, images, documents, and audio.
 
-- Backend API for NewSystem registry records.
-- Vue frontend for dashboard, NewSystem registry, account directory, settings, and permission management.
-- IAM delegated authentication and permission filtering.
-- Local/server Docker Compose files.
-- GitLab CI and GitLab deploy compose templates for Harbor-based delivery.
+The system combines a Vue.js frontend, FastAPI backend, MongoDB database, Gemini API integration, and Docker-based deployment.
 
 ## Runtime Ports
 
