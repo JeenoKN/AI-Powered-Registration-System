@@ -2,17 +2,17 @@
 
 A full-stack senior project that uses AI to simplify the creation and management of dynamic registration forms.
 
-The system allows users to generate structured form content from multiple input formats, including text, documents, images, and audio. It combines a Vue.js frontend, FastAPI backend, MongoDB database, Gemini API integration, and Docker-based development environment.
+The system can generate structured form content from multiple input formats, including text, PDF documents, images, and audio. It combines a Vue.js frontend, FastAPI backend, MongoDB database, Gemini API integration, and Docker-based development environment.
 
 ## Features
 
 - Create and manage dynamic registration forms
 - Generate structured form content using AI
-- Process multiple input formats including text, PDF, image, and audio
-- Upload and process files through the backend API
-- Store application and form data using MongoDB
-- Interactive web interface for managing generated forms
+- Process text, PDF, image, and audio inputs
+- Upload and process files through backend APIs
+- Edit generated forms through an interactive web interface
 - Drag-and-drop form editing
+- Store forms and application data in MongoDB
 - RESTful API communication between frontend and backend
 - Dockerized frontend, backend, and database services
 
@@ -59,10 +59,81 @@ Vue.js Frontend
   v
 FastAPI Backend
   |
-  +-------------------+
-  |                   |
-  v                   v
-MongoDB          Google Gemini API
-                      |
-                      v
-             AI / Document Processing
+  +----------------------+----------------------+
+  |                      |                      |
+  v                      v                      v
+MongoDB            Gemini API          File Processing
+                                      PDF / Image / Audio
+```
+
+## Project Structure
+
+```text
+AI-Powered-Registration-System/
+├── frontend-vue/          # Vue.js frontend
+├── backend-python/        # FastAPI backend and AI processing
+├── docs/                  # Project documentation
+├── test-files/            # Sample files for testing
+├── docker-compose.yml     # Multi-service local environment
+└── README.md
+```
+
+## Getting Started
+
+### Requirements
+
+- Git
+- Docker
+- Docker Compose
+- Google Gemini API key
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/JeenoKN/AI-Powered-Registration-System.git
+cd AI-Powered-Registration-System
+```
+
+### 2. Configure environment variables
+
+Create the required environment file and add your Gemini API key and other local configuration values.
+
+Example:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Do not commit real API keys, passwords, tokens, or other secrets to GitHub.
+
+### 3. Run with Docker
+
+```bash
+docker compose up --build
+```
+
+This starts the application services defined in `docker-compose.yml`.
+
+## Key Learning Outcomes
+
+This project provided hands-on experience with:
+
+- Full-stack web application development
+- Vue.js frontend development
+- REST API design with FastAPI
+- MongoDB integration
+- AI API integration
+- Multi-format document processing
+- Frontend/backend integration
+- Docker-based development environments
+- Debugging and integrating multiple application services
+
+## Project Type
+
+Senior Project  
+Bachelor of Engineering in Computer Engineering
+
+## Author
+
+**Theeramonrapat Vichaisri**  
+Computer Engineering Student

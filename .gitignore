@@ -1,11 +1,36 @@
+# Environment / secrets
 .env
 .env.*
+!.env.example
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Vue
 node_modules/
 dist/
 coverage/
-frontend-vue/tests/e2e/reports/
 .cache/
+frontend-vue/tests/e2e/reports/
+
+# IDE
+.idea/
+.vscode/
+
+# Logs / temporary files
 *.log
+*.tmp
+*_backup.*
+temp_*
+
+# Application backups
 backend-node/backups/
+
+# OS
 .DS_Store
+Thumbs.db
