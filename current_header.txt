@@ -1,0 +1,15 @@
+              <header class="form-header">
+                <div class="form-logo-container">
+                  <img v-if="generatedForm?.theme?.logo_url" :src="generatedForm.theme.logo_url" class="form-logo-image" />
+                  <div class="form-logo-placeholder" v-else>
+                    <span>No Logo</span>
+                  </div>
+                  <div class="form-logo-overlay" @click="logoFileInput.click()">
+                    <span>🖼️ Upload / Replace Logo</span>
+                  </div>
+                </div>
+                <input type="file" ref="logoFileInput" @change="handleLogoUpload" accept="image/*" hidden />
+                
+                <input v-model="generatedForm.title" class="form-title-input" placeholder="Form Title" />
+                <textarea v-model="generatedForm.description" class="form-description-input" placeholder="Form Description"></textarea>
+              </header>

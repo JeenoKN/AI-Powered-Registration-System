@@ -1,0 +1,5 @@
+{
+  "provinces": ["Bangkok", "Chiang Mai", "Phuket", "Khon Kaen", "Chonburi", "Nakhon Ratchasima", "Surat Thani", "Songkhla"],
+  "faculties": ["Engineering", "Medicine", "Arts", "Business Administration", "Science", "Education", "Law", "Architecture"],
+  "title_names": ["นาย", "นาง", "นางสาว", "ดร.", "ศ.ดร.", "ผศ.ดร.", "รศ.ดร."]
+}

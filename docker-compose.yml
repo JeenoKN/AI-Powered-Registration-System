@@ -1,0 +1,39 @@
+name: newsystem-db
+
+services:
+  db:
+    image: mongo:latest
+    container_name: newsystem-mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: always
+
+  backend:
+    build: 
+      context: ./backend-python
+      dockerfile: Dockerfile
+    container_name: newsystem-backend
+    ports:
+      - "8000:8000"
+    # 👇 เพิ่ม 2 บรรทัดนี้เพื่อให้ Docker ดึงไฟล์ .env เข้าไปในตู้
+    env_file:
+      - ./backend-python/.env
+    depends_on:
+      - db
+    restart: always
+
+  frontend:
+    build: 
+      context: ./frontend-vue
+      dockerfile: Dockerfile
+    container_name: newsystem-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  mongodb_data:

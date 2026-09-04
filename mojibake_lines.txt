@@ -1,0 +1,137 @@
+Line 33: chatMessages.value.push({ sender: 'ai', text: `✅ File attached: ${file.name}` })
+Line 37: chatMessages.value.push({ sender: 'ai', text: `❌ Upload failed: ${err.message}` })
+Line 119: // à¹à¸—à¹‡à¸šà¸—à¸µà¹ˆà¸à¸³à¸¥à¸±à¸‡à¸—à¸³à¸‡à¸²à¸™à¸­à¸¢à¸¹à¹ˆà¹à¸¥à¸°à¸£à¸²à¸¢à¸à¸²à¸£à¸Ÿà¸­à¸£à¹Œà¸¡à¸ˆà¸²à¸ MongoDB
+Line 166: // à¸ªà¸–à¸²à¸™à¸°à¸à¸²à¸£à¹à¸à¹‰à¹„à¸‚à¸Ÿà¸´à¸¥à¸”à¹Œ (Inline Editor)
+Line 176: // à¸ªà¸–à¸²à¸™à¸°à¸à¸²à¸£à¸¥à¸²à¸à¸§à¸²à¸‡ (Drag & Drop)
+Line 179: // ðŸŽ¨ AI Theme Engine State
+Line 191: // 📊 Responses Viewer State (Live Data)
+Line 244: // à¸ªà¸–à¸²à¸™à¸° Backend / MongoDB (dashboard)
+Line 251: text: 'à¸ªà¸§à¸±à¸ªà¸”à¸µà¸„à¸£à¸±à¸š! à¸à¸£à¸¸à¸“à¸²à¹€à¸¥à¸·à¸­à¸à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸—à¸µà¹ˆà¸•à¹‰à¸­à¸‡à¸à¸²à¸£à¸ˆà¸²à¸à¹€à¸¡à¸™à¸¹à¸”à¹‰
+Line 256: { value: 'text_prompt', label: '1. Text Prompt Only', icon: 'âœï¸', hint: 'à¸ªà¸±à¹ˆà¸‡à¸‡à¸²à¸™à¸”à¹‰à¸§à¸¢à¸‚à¹‰à¸­à¸„à¸§à¸²à¸¡ภà¸²à¸©à¸²à¸˜à¸£à¸£
+Line 257: { value: 'physical_paper', label: '2. Physical Paper (OCR)', icon: 'ðŸ“„', hint: 'à¸­à¸±à¸›à¹‚à¸«à¸¥à¸”à¸£à¸¹à¸›à¸–à¹ˆà¸²à¸¢à¸Ÿà¸­à¸£à¹Œà¸¡à¹€à¸­à¸à¸
+Line 258: { value: 'handwritten_sketch', label: '3. Handwritten Sketch', icon: 'ðŸ–ï¸', hint: 'à¸£à¸¹à¸›ภà¸²à¸žà¸Ÿà¸­à¸£à¹Œà¸¡à¸—à¸µà¹ˆà¸£à¹ˆà¸²à¸‡à¸”à¹‰à¸§à¸
+Line 259: { value: 'voice', label: '4. Voice Instruction', icon: 'ðŸŽ¤', hint: 'à¹„à¸Ÿà¸¥à¹Œà¹€à¸ªà¸µà¸¢à¸‡à¸žà¸¹à¸”à¸ªà¸±à¹ˆà¸‡à¸‡à¸²à¸™à¸«à¸£à¸·à¸­à¸„à¸³à¸­à¸
+Line 260: { value: 'markdown', label: '5. Markdown (.md)', icon: 'ðŸ“', hint: 'à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¹€à¸­à¸à¸ªà¸²à¸£ Text à¸£à¸¹à¸›à¹à¸šà¸š Markdown' 
+Line 261: { value: 'digital_pdf', label: '6. Digital PDF Extractor', icon: '📄', hint: 'à¹€à¸­à¸à¸ªà¸²à¸£à¸›à¸£à¸°à¹€ภà¸— PDF à¸Ÿà¸­à¸£à¹Œà¸¡à¸”à¸´à¸ˆà¸´à¸—à¸±à
+Line 262: { value: 'spreadsheet', label: '7. Legacy Spreadsheet', icon: '📊', hint: 'à¹„à¸Ÿà¸¥à¹Œà¸•à¸²à¸£à¸²à¸‡ Excel, Google Sheets à¸«à¸£à¸·à¸­ CSV' },
+Line 263: { value: 'ui_screenshot', label: '8. UI Screenshot', icon: 'ðŸ–¼ï¸', hint: 'ภà¸²à¸žà¹à¸„à¸›à¸«à¸™à¹‰à¸²à¸ˆà¸­ UI à¸‚à¸­à¸‡à¹€à¸§à¹‡à¸šà¹„à¸‹à¸•à¹Œà¹
+Line 264: { value: 'json_config', label: '9. JSON Configuration', icon: '⚙️', hint: 'à¹„à¸Ÿà¸¥à¹Œà¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡ JSON Schema' },
+Line 265: { value: 'scanned_image', label: '10. Scanned Image', icon: '🖨️', hint: 'ภà¸²à¸žà¸ªà¹à¸à¸™ PDF/TIFF à¸„à¸§à¸²à¸¡à¸¥à¸°à¹€à¸­à¸µà¸¢à¸”à¸ªà¸¹à¸‡' }
+Line 286: if (selectedInputType.value === val) return  // à¸–à¹‰à¸²à¸„à¸¥à¸´à¸ function à¹€à¸”à¸´à¸¡ à¹„à¸¡à¹ˆà¸•à¹‰à¸­à¸‡à¸—à¸³à¸­à¸°à¹„à¸£
+Line 288: // à¸¥à¹‰à¸²à¸‡à¹„à¸Ÿà¸¥à¹Œà¹€à¸ªà¸¡à¸­à¹€à¸¡à¸·à¹ˆà¸­à¸ªà¸¥à¸±à¸š function à¹€à¸žà¸·à¹ˆà¸­à¸›à¹‰à¸­à¸‡à¸à¸±à¸™à¹„à¸Ÿà¸¥à¹Œà¸œà¸´à¸”à¸›à¸£à¸°à¹€ภà¸—à
+Line 302: // ðŸ‘‡ [à¹€à¸žà¸´à¹ˆà¸¡à¹ƒà¸«à¸¡à¹ˆ] à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸ªà¸³à¸«à¸£à¸±à¸šà¹€à¸„à¸¥à¸µà¸¢à¸£à¹Œà¸„à¹ˆà¸²à¸—à¸µà¹ˆà¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¸à¸£à¸­à¸à
+Line 318: // 2. à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸ªà¹ˆà¸‡à¸„à¸³à¸ªà¸±à¹ˆà¸‡à¹„à¸›à¸«à¸² Backend (à¸¢à¸´à¸‡ API à¸‚à¸­à¸‡à¸ˆà¸£à¸´à¸‡à¹€à¸žà¸·à¹ˆà¸­à¹€à¸ˆà¸™à¹‚à¸„à¸£à¸‡
+Line 329: text: userInstruction || '(à¸ªà¹ˆà¸‡à¹„à¸Ÿà¸¥à¹Œà¹€à¸žà¸·à¹ˆà¸­à¸—à¸³à¸à¸²à¸£à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸£à¸¹à¸›ภà¸²à¸ž)',
+Line 367: chatMessages.value.push({ sender: 'ai', text: "✨ à¸Ÿà¸­à¸£à¹Œà¸¡à¸‚à¸­à¸‡à¸„à¸¸à¸“à¸–à¸¹à¸à¸­à¸±à¸›à¹€à¸”à¸•à¹€à¸£à¸µà¸¢à¸šà¸£à¹‰à¸­à¸¢à¹à¸¥à¹‰à¸§!"
+Line 385: throw new Error(`à¹€à¸à¸´à¸”à¸‚à¹‰à¸­à¸œà¸´à¸”à¸žà¸¥à¸²à¸”à¸ˆà¸²à¸à¹€à¸‹à¸´à¸£à¹Œà¸Ÿà¹€à¸§à¸­à¸£à¹Œ: ${response.status}`)
+Line 393: chatMessages.value.push({ sender: 'ai', text: `ðŸ¤– à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¹‚à¸«à¸¡à¸” "${activeFunction.value.label}" à¸ªà¸³à¹
+Line 402: description: 'à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸—à¸µà¹ˆà¸£à¸°à¸šà¸šà¸”à¸¶à¸‡à¸­à¸­à¸à¸¡à¸²à¹„à¸”à¹‰',
+Line 435: text: 'à¸‚à¸­à¸­ภà¸±à¸¢à¸„à¸£à¸±à¸š à¹‚à¸„à¸§à¸•à¸²à¸à¸²à¸£à¹ƒà¸Šà¹‰à¸‡à¸²à¸™ AI à¸‚à¸­à¸‡à¸£à¸°à¸šà¸šà¹€à¸•à¹‡à¸¡à¸Šà¸±à¹ˆà¸§à¸„à¸£à¸²à¸§ (Token Exh
+Line 440: text: `ðŸš¨ [à¸‚à¹‰à¸­à¸œà¸´à¸”à¸žà¸¥à¸²à¸”] à¹„à¸¡à¹ˆà¸ªà¸²à¸¡à¸²à¸£à¸–à¹€à¸Šà¸·à¹ˆà¸­à¸¡à¸•à¹ˆà¸­à¸à¸±à¸š Backend à¹„à¸”à¹‰ à¸«à¸£à¸·à¸­ Backend à¹
+Line 446: title: `âš ï¸ Sandbox Mode (${activeFunction.value.label})`,
+Line 449: title: 'à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ˆà¸³à¸¥à¸­à¸‡',
+Line 450: description: attachedFileName ? `à¸§à¸´à¹€à¸„à¸£à¸²à¸°à¸«à¹Œà¸ˆà¸²à¸à¹„à¸Ÿà¸¥à¹Œà¸ˆà¸³à¸¥à¸­à¸‡: ${attachedFileName}` : 'à¸„à¸³à¸ªà¸±à¹ˆà¸‡à¸ˆà¸³à¸¥à
+Line 452: { label: 'Mock Field 1', name: 'mock_1', _fid: _genFid(), type: 'text', placeholder: 'à¸—à¸”à¸ªà¸­à¸šà¸‚à¹‰à¸­à¸¡à¸¹à¸¥...' },
+Line 453: { label: 'à¸«à¸¡à¸²à¸¢à¹€à¸«à¸•à¸¸', name: 'notes', _fid: _genFid(), type: 'textarea', placeholder: 'à¸—à¸”à¸ªà¸­à¸šà¸à¸¥à¹ˆà¸­à¸‡à¸‚à¹‰à¸­à¸„à¸§à¸²à
+Line 467: // 3. à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸ªà¹ˆà¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸Ÿà¸­à¸£à¹Œà¸¡à¸—à¸µà¹ˆà¸œà¸¹à¹‰à¹ƒà¸Šà¹‰à¸à¸£à¸­à¸ à¹€à¸‚à¹‰à¸²à¸ªà¸¹à¹ˆ MongoDB
+Line 495: throw new Error(`à¹€à¸‹à¸´à¸£à¹Œà¸Ÿà¹€à¸§à¸­à¸£à¹Œà¸›à¸à¸´à¹€à¸ªà¸˜à¸à¸²à¸£à¸šà¸±à¸™à¸—à¸¶à¸à¸‚à¹‰à¸­à¸¡à¸¹à¸¥: ${response.status}`)
+Line 500: // à¸–à¹‰à¸²à¹€à¸›à¹‡à¸™à¸Ÿà¸­à¸£à¹Œà¸¡à¹ƒà¸«à¸¡à¹ˆ à¹ƒà¸«à¹‰à¸­à¸±à¸›à¹€à¸”à¸• ID à¸à¸¥à¸±à¸šà¹€à¸‚à¹‰à¸²à¸ªà¸¹à¹ˆ generatedForm
+Line 505: alert(isNewForm ? 'ðŸš€ à¸šà¸±à¸™à¸—à¸¶à¸à¸Ÿà¸­à¸£à¹Œà¸¡à¹ƒà¸«à¸¡à¹ˆà¸ªà¸³à¹€à¸£à¹‡à¸ˆ!' : 'ðŸš€ à¸­à¸±à¸›à¹€à¸”à¸•à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸Ÿà¸­à
+Line 509: text: `ðŸŽ‰ à¸­à¸±à¸›à¹€à¸”à¸•à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸Ÿà¸­à¸£à¹Œà¸¡à¸”à¸´à¸ˆà¸´à¸—à¸±à¸¥ "${generatedForm.value.title}" à¸¥à¸‡à¹ƒà¸™à¸£à¸°à¸šà¸š 
+Line 514: alert(`ðŸš¨ à¹€à¸à¸´à¸”à¸‚à¹‰à¸­à¸œà¸´à¸”à¸žà¸¥à¸²à¸”à¹ƒà¸™à¸à¸²à¸£à¸šà¸±à¸™à¸—à¸¶à¸: ${error.message}`)
+Line 521: // 4. à¸Ÿà¸±à¸‡à¸à¹Œà¸Šà¸±à¸™à¸ªà¸³à¸«à¸£à¸±à¸šà¸à¸²à¸£ Export à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡à¸Ÿà¸­à¸£à¹Œà¸¡à¸­à¸­à¸à¸¡à¸²à¹€à¸›à¹‡à¸™à¹„à¸Ÿà¸¥à¹Œ Vue
+Line 524: // à¸à¸£à¸­à¸‡ PointerEvent à¸«à¸£à¸·à¸­ Event à¸‚à¸­à¸‡à¹€à¸šà¸£à¸²à¸§à¹Œà¹€à¸‹à¸­à¸£à¹Œà¸­à¸­à¸ à¹€à¸žà¸·à¹ˆà¸­à¹ƒà¸Šà¹‰à¸„à¹ˆà¸²à¸ˆà¸²à¸ generat
+Line 532: // à¸ªà¸£à¹‰à¸²à¸‡ unique safeKey à¸ªà¸³à¸«à¸£à¸±à¸šà¹à¸•à¹ˆà¸¥à¸° field à¹€à¸žà¸·à¹ˆà¸­à¸›à¹‰à¸­à¸‡à¸à¸±à¸™ key à¸Šà¸™à¸à¸±à¸™ (à¹‚à¸”à¸¢à¹€à¸‰à¸ž
+Line 541: // à¸›à¹‰à¸­à¸‡à¸à¸±à¸™ key à¸‹à¹‰à¸³à¸à¸±à¸™
+Line 565: // 1. à¸ªà¸£à¹‰à¸²à¸‡ <script setup> à¸‚à¸­à¸‡ Vue Component à¸—à¸µà¹ˆà¸”à¸²à¸§à¸™à¹Œà¹‚à¸«à¸¥à¸”
+Line 588: alert('à¸šà¸±à¸™à¸—à¸¶à¸à¸‚à¹‰à¸­à¸¡à¸¹à¸¥à¸ªà¸³à¹€à¸£à¹‡à¸ˆ! ðŸš€')
+Line 596: // à¹€à¸„à¸¥à¸µà¸¢à¸£à¹Œà¸„à¹ˆà¸²à¸Ÿà¸´à¸¥à¸”à¹Œà¸—à¸µà¹ˆà¸–à¸¹à¸à¸‹à¹ˆà¸­à¸™à¹‚à¸”à¸¢ Conditional Logic à¸­à¸±à¸•à¹‚à¸™à¸¡à¸±à¸•à¸´
+Line 628: // 2. à¸ªà¸£à¹‰à¸²à¸‡à¹‚à¸„à¸£à¸‡à¸ªà¸£à¹‰à¸²à¸‡ <template> à¸‚à¸­à¸‡ Vue Component
+Line 633: // à¸ªà¸£à¹‰à¸²à¸‡ style binding à¸ªà¸³à¸«à¸£à¸±à¸š container à¹€à¸žà¸·à¹ˆà¸­à¸£à¸­à¸‡à¸£à¸±à¸š Dynamic Theme
+Line 658: // à¸ªà¸£à¹‰à¸²à¸‡ lookup map: (sIdx, fIdx) => safeKey à¸ˆà¸²à¸ allFieldKeys à¸—à¸µà¹ˆ pre-compute à¹„à¸§à¹‰à¹à¸¥à¹‰à¸§
+Line 678: // à¸ªà¸£à¹‰à¸²à¸‡ visibility directive (v-show) à¸ªà¸³à¸«à¸£à¸±à¸š conditional logic
+Line 700: templateContent += `                <option value="" disabled selected>${placeholder || 'à¹‚à¸›à¸£à¸”à¹€à¸¥à¸·à¸­à¸à¸‚à¹‰à¸­à¸¡à¸¹à¸¥...'}</option>\n
+Line 721: templateContent += `                  <input type="checkbox" v-model="formResponses['${safeKey}']" /> à¸¢à¸­à¸¡à¸£à¸±à¸šà¹€à¸‡à¸·à¹ˆà¸­à¸™à¹„à¸‚\n`
+Line 751: {{ isSubmitting ? 'à¸à¸³à¸¥à¸±à¸‡à¸šà¸±à¸™à¸—à¸¶à¸...' : 'à¸ªà¹ˆà¸‡à¸‚à¹‰à¸­à¸¡à¸¹à¸¥ ðŸš€' }}
+Line 760: <h3>✨ AI Quick Tweaker</h3>
+Line 761: <button class="btn-close-modal" @click="closeEditModal">Ã—</button>
+Line 777: <option value="text">ðŸ“ Text (Short)</option>
+Line 778: <option value="textarea">ðŸ“œ Textarea (Long)</option>
+Line 779: <option value="number">ðŸ”¢ Number</option>
+Line 780: <option value="email">ðŸ“§ Email</option>
+Line 781: <option value="date">ðŸ“… Date</option>
+Line 782: <option value="select">ðŸ”½ Dropdown (Select)</option>
+Line 783: <option value="radio">ðŸ”˜ Radio Options</option>
+Line 784: <option value="checkbox">✅ Checkbox Options</option>
+Line 785: <option value="file">ðŸ“ File Upload</option>
+Line 786: <option value="master_data">ðŸ“š Master Data Dropdown</option>
+Line 801: <option value="title_names">à¸„à¸³à¸™à¸³à¸«à¸™à¹‰à¸²à¸Šà¸·à¹ˆà¸­ (à¸™à¸²à¸¢, à¸™à¸²à¸‡, à¸™à¸²à¸‡à¸ªà¸²à¸§, etc.)</option>
+Line 802: <option value="provinces">à¸ˆà¸±à¸‡à¸«à¸§à¸±à¸” (Provinces)</option>
+Line 803: <option value="faculties">à¸„à¸“à¸° (Faculties)</option>
+Line 835: <!-- ✨ Phase 4: Share & Embed Modal -->
+Line 915: {{ copyEmbedStatus === 'copied' ? 'Copied to Clipboard! ✅' : 'Copy Embed Code' }}
+Line 1074: /* â”€â”€â”€ Fix #2: Form Selector Row â”€â”€â”€ */
+Line 1108: /* â”€â”€â”€ Fix #3: Removed field row & badge â”€â”€â”€ */
+Line 1127: /* â”€â”€â”€ Phase 4: Share & Embed Modal â”€â”€â”€ */
+Line 1395: // ðŸŽ¨ AI Theme Engine Call
+Line 1432: text: 'à¸‚à¸­à¸­ภà¸±à¸¢à¸„à¸£à¸±à¸š à¹‚à¸„à¸§à¸•à¸²à¸à¸²à¸£à¹ƒà¸Šà¹‰à¸‡à¸²à¸™ AI à¸‚à¸­à¸‡à¸£à¸°à¸šà¸šà¹€à¸•à¹‡à¸¡à¸Šà¸±à¹ˆà¸§à¸„à¸£à¸²à¸§ (Token Exh
+Line 1448: // ðŸ›  Core Logic: Fetch, Load, Delete Forms
+Line 1471: if (!confirm('à¸¢à¸·à¸™à¸¢à¸±à¸™à¸à¸²à¸£à¸¥à¸šà¸Ÿà¸­à¸£à¹Œà¸¡à¸™à¸µà¹‰? à¸‚à¹‰à¸­à¸¡à¸¹à¸¥ Response à¸ˆà¸°à¸–à¸¹à¸à¸¥à¸šà¹„à¸›à¸”à¹‰à¸§à¸¢')) return
+Line 1480: alert('à¸¥à¸šà¸Ÿà¸­à¸£à¹Œà¸¡à¹„à¸¡à¹ˆà¸ªà¸³à¹€à¸£à¹‡à¸ˆ')
+Line 1599: // ✨ AI Quick Tweaker: Edit Form Logic
+Line 1675: return `à¸—à¸³à¹€à¸¡à¸·à¹ˆà¸­à¸§à¸±à¸™ ${datePart} à¹€à¸§à¸¥à¸² ${timePart}`;
+Line 1694: if (!confirm('à¸¢à¸·à¸™à¸¢à¸±à¸™à¸à¸²à¸£à¸¥à¸š Field à¸™à¸µà¹‰?')) return;
+Line 1708: // 🔄 Phase 4: Share & Embed System
+Line 1774: <div class="brand-logo ai-glow">✨</div>
+Line 1783: <span class="nav-icon">✨</span> Create Form
+Line 1786: <span class="nav-icon">📁</span> Directory
+Line 1789: <span class="nav-icon">📂</span> Templates
+Line 1792: <span class="nav-icon">📊</span> Dashboard
+Line 1827: ↶ Undo
+Line 1830: Redo â†ª
+Line 1833: ðŸ§¹ Reset
+Line 1840: <div class="sender-avatar">{{ msg.sender === 'ai' ? 'ðŸ¤–' : 'ðŸ‘¤' }}</div>
+Line 1850: <div class="sender-avatar sparkle-icon">✨</div>
+Line 1852: <div class="message-text-body thinking-state">à¸à¸³à¸¥à¸±à¸‡à¸›à¸£à¸°à¸¡à¸§à¸¥à¸œà¸¥...</div>
+Line 1861: <span class="mini-upload-icon">ðŸ“¤</span>
+Line 1865: <span class="file-preview-icon">ðŸ“Ž</span>
+Line 1870: <button class="remove-file-action" @click="clearFile">Ã—</button>
+Line 1880: <button class="btn-attach" @click="chatFileInput.click()" :disabled="loading" title="Attach Image">ðŸ“Ž</button>
+Line 1894: <span>ðŸŽ¨</span> AI Canvas
+Line 1897: <button @click="deviceMode = 'desktop'" :style="deviceMode === 'desktop' ? 'background: white; box-shadow: 0 1px 2px rgba(0,0,0,0.1); color: #0f172a;'
+Line 1898: <button @click="deviceMode = 'tablet'" :style="deviceMode === 'tablet' ? 'background: white; box-shadow: 0 1px 2px rgba(0,0,0,0.1); color: #0f172a;' :
+Line 1899: <button @click="deviceMode = 'mobile'" :style="deviceMode === 'mobile' ? 'background: white; box-shadow: 0 1px 2px rgba(0,0,0,0.1); color: #0f172a;' :
+Line 1904: {{ isFullscreen ? 'ðŸ——' : 'ðŸ–µ' }}
+Line 1917: {{ themeLoading ? 'Styling...' : '✨ Style' }}
+Line 1925: <div class="empty-icon-box">ðŸ“</div>
+Line 1945: <span>ðŸ–¼ï¸ Upload / Replace Logo</span>
+Line 1976: <span class="icon">âœï¸</span> <span class="lbl">à¹à¸à¹‰à¹„à¸‚</span>
+Line 1979: <span class="icon">âž•</span> <span class="lbl">à¹€à¸žà¸´à¹ˆà¸¡à¸Ÿà¸´à¸¥à¸”à¹Œ</span>
+Line 1982: <span class="icon">ðŸ—‘ï¸</span> <span class="lbl">à¸¥à¸š</span>
+Line 2132: <label class="form-selector-label" style="font-weight: 600; color: #475569; font-size: 0.95rem;">📊 Viewing responses for:</label>
+Line 2141: 📊 Export to Excel
+Line 2148: <div class="kpi-icon">ðŸ“</div>
+Line 2155: <div class="kpi-icon">✅</div>
+Line 2162: <div class="kpi-icon">⏳</div>
+Line 2174: <span class="panel-icon">ðŸ“‹</span>
+Line 2233: <button class="btn-close-modal" @click="closeViewModal" style="background: #f1f5f9; border: none; border-radius: 50%; width: 36px; height: 36px; displ
+Line 2270: <h3>✨ AI Quick Tweaker</h3>
+Line 2271: <button class="btn-close-modal" @click="closeEditModal">Ã—</button>
+Line 2287: <option value="text">ðŸ”  Text (Short)</option>
+Line 2288: <option value="textarea">ðŸ“ Textarea (Long)</option>
+Line 2289: <option value="number">ðŸ”¢ Number</option>
+Line 2290: <option value="email">ðŸ“§ Email</option>
+Line 2291: <option value="date">ðŸ“… Date</option>
+Line 2292: <option value="select">ðŸ”½ Dropdown (Select)</option>
+Line 2293: <option value="radio">ðŸ”˜ Radio Options</option>
+Line 2294: <option value="checkbox">â˜‘ï¸ Checkbox Options</option>
+Line 2295: <option value="file">ðŸ“Ž File Upload</option>
+Line 2335: <!-- ✨ Phase 4: Share & Embed Modal -->
+Line 2395: Open â†—
+Line 2419: {{ copyEmbedStatus === 'copied' ? 'Copied to Clipboard! ✅' : 'Copy Embed Code' }}
+Line 3518: /* â”€â”€â”€ Directory Card â€” Premium Redesign â”€â”€â”€ */
+Line 3671: /* â”€â”€â”€ Dashboard: Premium Analytics Studio â”€â”€â”€ */
+Line 4131: /* â”€â”€â”€ Modal Footer: Single Save Pill â”€â”€â”€ */
+Line 4449: /* â”€â”€â”€ Fix #2: Form Selector Row â”€â”€â”€ */
+Line 4483: /* â”€â”€â”€ Fix #3: Removed field row & badge â”€â”€â”€ */
+Line 4502: /* â”€â”€â”€ Phase 4: Share & Embed Modal â”€â”€â”€ */

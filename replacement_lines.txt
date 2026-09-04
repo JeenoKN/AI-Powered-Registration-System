@@ -1,0 +1,57 @@
+Line 119: // �ท็บที่�ำลังทำงานอยู่�ละราย�ารฟอร์มจา� MongoDB
+Line 166: // สถานะ�าร��้ไขฟิลด์ (Inline Editor)
+Line 176: // สถานะ�ารลา�วาง (Drag & Drop)
+Line 251: text: '! �รุณาเลือ�ฟัง�์ชันที่ต้อง�ารจา�เมนูด้านซ้าย �นบไฟล์ �ละพิมพ์คำสั่งตรง�ลางนี้ได้เลยครับ �ั่งขวาจะ�สดงผลฟอร์มหลังจา�ที่ผมประมวลผลเสร็จ�ล้ว '
+Line 256: { value: 'text_prompt', label: '1. Text Prompt Only', icon: '��', hint: '' },
+Line 257: { value: 'physical_paper', label: '2. Physical Paper (OCR)', icon: '', hint: 'อัปโหลดรูปถ่ายฟอร์มเอ�สารใบเสร็จ/' },
+Line 258: { value: 'handwritten_sketch', label: '3. Handwritten Sketch', icon: '��', hint: '' },
+Line 260: { value: 'markdown', label: '5. Markdown (.md)', icon: '�', hint: 'โครงสร้างเอ�สาร Text รูป�บบ Markdown' },
+Line 261: { value: 'digital_pdf', label: '6. Digital PDF Extractor', icon: '', hint: 'เอ�สารประเท PDF ' },
+Line 263: { value: 'ui_screenshot', label: '8. UI Screenshot', icon: '🖼�', hint: 'าพ�คปหน้าจอ UI ของเว็บไซต์เ�่า' },
+Line 265: { value: 'scanned_image', label: '10. Scanned Image', icon: '', hint: 'าพส��น PDF/TIFF ' }
+Line 286: if (selectedInputType.value === val) return  // ถ้าคลิ� function
+Line 288: //  function เพื่อป้อง�ันไฟล์ผิดประเทไปยัง backend
+Line 302: //  [] ฟัง�์ชันสำหรับเคลียร์ค่าที่ผู้ใช้�รอ�ในฟอร์ม
+Line 318: // 2. ฟัง�์ชันส่งคำสั่งไปหา Backend ( API )
+Line 329: text: userInstruction || '(ส่งไฟล์เพื่อทำ�ารวิเคราะห์รูปาพ)',
+Line 367: chatMessages.value.push({ sender: 'ai', text: " ฟอร์มของคุณถู�อัปเดตเรียบร้อย�ล้ว!" })
+Line 385: throw new Error(`เ�ิดข้อผิดพลาดจา�เซิร์ฟเวอร์: ${response.status}`)
+Line 402: description: 'ข้อมูลที่ระบบดึงออ�มาได้',
+Line 435: text: 'ขออัยครับ โควตา�ารใช้งาน AI  (Token Exhausted) รบ�วนรอสั�ครู่�ล้วลองใหม่อี�ครั้งครับ �'
+Line 440: text: ` [] ไม่สามารถเชื่อมต่อ�ับ Backend   Backend เ�ิด Error ระบบจึงจำลองฟอร์มขึ้นมา�ทนครับ (Detail: ${error.message || error})`
+Line 446: title: `⚠� Sandbox Mode (${activeFunction.value.label})`,
+Line 450: description: attachedFileName ? `วิเคราะห์จา�ไฟล์จำลอง: ${attachedFileName}` : '',
+Line 453: { label: '', name: 'notes', _fid: _genFid(), type: 'textarea', placeholder: 'ทดสอบ�ล่องข้อความ...' }
+Line 467: // 3. ฟัง�์ชันส่งข้อมูลฟอร์มที่ผู้ใช้�รอ�  MongoDB
+Line 495: throw new Error(`เซิร์ฟเวอร์ป�ิเสธ�ารบันทึ�ข้อมูล: ${response.status}`)
+Line 500: //   ID �ลับเข้าสู่ generatedForm
+Line 505: alert(isNewForm ? ' บันทึ�ฟอร์มใหม่สำเร็จ!' : ' !')
+Line 509: text: `  "${generatedForm.value.title}"  MongoDB ของคุณเรียบร้อย�ล้วครับ!`
+Line 514: alert(` เ�ิดข้อผิดพลาดใน�ารบันทึ�: ${error.message}`)
+Line 521: // 4. ฟัง�์ชันสำหรับ�าร Export โครงสร้างฟอร์มออ�มาเป็นไฟล์ Vue Component (.vue)
+Line 524: // �รอง PointerEvent  Event ของเบราว์เซอร์ออ� เพื่อใช้ค่าจา� generatedForm.value
+Line 532: //  unique safeKey สำหรับ�ต่ละ field เพื่อป้อง�ัน key ชน�ัน (โดยเฉพาะชื่อาษาไทย)
+Line 541: // ป้อง�ัน key ซ้ำ�ัน
+Line 588: alert('บันทึ�ข้อมูลสำเร็จ! ')
+Line 596: // เคลียร์ค่าฟิลด์ที่ถู�ซ่อนโดย Conditional Logic
+Line 658: //  lookup map: (sIdx, fIdx) => safeKey จา� allFieldKeys  pre-compute ไว้�ล้ว
+Line 700: templateContent += `                <option value="" disabled selected>${placeholder || 'โปรดเลือ�ข้อมูล...'}</option>\n`
+Line 751: {{ isSubmitting ? '�ำลังบันทึ�...' : ' ' }}
+Line 761: <button class="btn-close-modal" @click="closeEditModal">�</button>
+Line 777: <option value="text">� Text (Short)</option>
+Line 785: <option value="file">� File Upload</option>
+Line 1432: text: 'ขออัยครับ โควตา�ารใช้งาน AI  (Token Exhausted) รบ�วนรอสั�ครู่�ล้วลองใหม่อี�ครั้งครับ �'
+Line 1471: if (!confirm('ยืนยัน�ารฟอร์มนี้?  Response จะถู�ไปด้วย')) return
+Line 1694: if (!confirm('ยืนยัน�าร Field ?')) return;
+Line 1852: <div class="message-text-body thinking-state">�ำลังประมวลผล...</div>
+Line 1870: <button class="remove-file-action" @click="clearFile">�</button>
+Line 1925: <div class="empty-icon-box">�</div>
+Line 1945: <span>🖼� Upload / Replace Logo</span>
+Line 1976: <span class="icon">��</span> <span class="lbl">��้ไข</span>
+Line 1982: <span class="icon">🗑�</span> <span class="lbl"></span>
+Line 2148: <div class="kpi-icon">�</div>
+Line 2233: <button class="btn-close-modal" @click="closeViewModal" style="background: #f1f5f9; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 1.2rem; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#e2e8f0'; this.style.color='#0f172a'" onmouseout="this.style.background='#f1f5f9'; this.style.color='#64748b'">�</button>
+Line 2271: <button class="btn-close-modal" @click="closeEditModal">�</button>
+Line 2288: <option value="textarea">� Textarea (Long)</option>
+Line 2294: <option value="checkbox">☑� Checkbox Options</option>
+Line 3518: /*  Directory Card � Premium Redesign  */

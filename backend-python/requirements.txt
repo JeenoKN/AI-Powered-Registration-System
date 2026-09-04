@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pymongo
+motor
+pydantic
+google-genai
+python-multipart
+speechrecognition
+pypdf
+pandas
+openpyxl

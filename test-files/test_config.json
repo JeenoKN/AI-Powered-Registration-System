@@ -1,0 +1,54 @@
+{
+  "title": "ฟอร์มลงทะเบียนประเมินสุขภาพ (Health Checkup Form)",
+  "description": "แบบฟอร์มสำหรับการนัดหมายและประเมินสุขภาพเบื้องต้น",
+  "theme_color": "#10b981",
+  "sections": [
+    {
+      "title": "ข้อมูลผู้รับการตรวจ",
+      "description": "กรุณากรอกข้อมูลจริงตามบัตรประชาชน",
+      "fields": [
+        {
+          "name": "fullname",
+          "label": "ชื่อ-นามสกุล",
+          "type": "text",
+          "required": true,
+          "placeholder": "นายสมชาย ใจดี"
+        },
+        {
+          "name": "age",
+          "label": "อายุ (ปี)",
+          "type": "number",
+          "required": true,
+          "placeholder": "25"
+        },
+        {
+          "name": "gender",
+          "label": "เพศ",
+          "type": "select",
+          "options": ["ชาย", "หญิง", "ไม่ระบุ"],
+          "required": true
+        }
+      ]
+    },
+    {
+      "title": "ประวัติการแพทย์",
+      "description": "ข้อมูลสุขภาพเบื้องต้น",
+      "fields": [
+        {
+          "name": "congenital_disease",
+          "label": "โรคประจำตัว",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "ระบุโรคประจำตัว (ถ้ามี)"
+        },
+        {
+          "name": "has_insurance",
+          "label": "ต้องการใช้สิทธิ์ประกันสุขภาพ",
+          "type": "radio",
+          "options": ["ใช่", "ไม่ใช่"],
+          "required": true
+        }
+      ]
+    }
+  ]
+}
