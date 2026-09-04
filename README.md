@@ -96,12 +96,18 @@ cd AI-Powered-Registration-System
 
 ### 2. Configure environment variables
 
-Create the required environment file and add your Gemini API key and other local configuration values.
+Copy the example backend environment file and add your local values:
 
-Example:
+```bash
+cp backend-python/.env.example backend-python/.env
+```
+
+Example values:
 
 ```env
 GEMINI_API_KEY=your_api_key_here
+GEMINI_MODEL=gemini-2.5-flash
+MONGO_URI=mongodb://localhost:27018/ai_registration
 ```
 
 Do not commit real API keys, passwords, tokens, or other secrets to GitHub.
