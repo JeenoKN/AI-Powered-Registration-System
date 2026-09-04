@@ -1,39 +1,40 @@
-name: newsystem-db
+name: ai-registration
 
 services:
   db:
     image: mongo:latest
-    container_name: newsystem-mongodb
+    container_name: ai-registration-mongodb
     ports:
       - "27018:27017"
     volumes:
       - mongodb_data:/data/db
-    restart: always
+    restart: unless-stopped
 
   backend:
-    build: 
+    build:
       context: ./backend-python
       dockerfile: Dockerfile
-    container_name: newsystem-backend
+    container_name: ai-registration-backend
     ports:
       - "8000:8000"
-    # 👇 เพิ่ม 2 บรรทัดนี้เพื่อให้ Docker ดึงไฟล์ .env เข้าไปในตู้
     env_file:
       - ./backend-python/.env
+    environment:
+      MONGO_URI: mongodb://ai-registration-mongodb:27017/ai_registration
     depends_on:
       - db
-    restart: always
+    restart: unless-stopped
 
   frontend:
-    build: 
+    build:
       context: ./frontend-vue
       dockerfile: Dockerfile
-    container_name: newsystem-frontend
+    container_name: ai-registration-frontend
     ports:
       - "5173:5173"
     depends_on:
       - backend
-    restart: always
+    restart: unless-stopped
 
 volumes:
   mongodb_data:
