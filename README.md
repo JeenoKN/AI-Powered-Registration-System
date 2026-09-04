@@ -1,41 +1,68 @@
-## AI-Powered Registration & Dynamic Form System
+# AI-Powered Registration & Dynamic Form System
 
-A full-stack senior project that uses AI to generate and manage dynamic registration forms from multiple input formats, including text, images, documents, and audio.
+A full-stack senior project that uses AI to simplify the creation and management of dynamic registration forms.
 
-The system combines a Vue.js frontend, FastAPI backend, MongoDB database, Gemini API integration, and Docker-based deployment.
+The system allows users to generate structured form content from multiple input formats, including text, documents, images, and audio. It combines a Vue.js frontend, FastAPI backend, MongoDB database, Gemini API integration, and Docker-based development environment.
 
-## Runtime Ports
+## Features
 
-- Backend host port: `8095`
-- Frontend host port: `8084`
-- Production domain: `https://new-system.mfu.ac.th`
+- Create and manage dynamic registration forms
+- Generate structured form content using AI
+- Process multiple input formats including text, PDF, image, and audio
+- Upload and process files through the backend API
+- Store application and form data using MongoDB
+- Interactive web interface for managing generated forms
+- Drag-and-drop form editing
+- RESTful API communication between frontend and backend
+- Dockerized frontend, backend, and database services
 
-## Local Run
+## Tech Stack
 
-```bash
-docker compose --env-file .env.local up -d --build
-```
+### Frontend
+- Vue.js 3
+- Vite
+- Vue Router
+- Tailwind CSS
+- Vue Draggable
 
-Open `http://127.0.0.1:8084`.
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+- Pydantic
 
-## Server Run
+### Database
+- MongoDB
+- PyMongo
+- Motor
 
-```bash
-APP_ENV=prod ./server.sh deploy
-```
+### AI & Document Processing
+- Google Gemini API
+- SpeechRecognition
+- PyPDF
+- Pandas
+- OpenPyXL
 
-The server compose binds backend and frontend to `127.0.0.1` by default so Nginx can publish the public domain.
+### DevOps
+- Docker
+- Docker Compose
 
-## Backend Scripts
+## System Architecture
 
-Run inside `backend-node`:
-
-- `npm run start:local`
-- `npm run test:contracts`
-- `npm run bootstrap:permissions`
-- `npm run reset:permissions`
-- `npm run register:iam`
-
-## Important
-
-Real env files are present in this workspace and ignored by git. Do not commit secrets. Register the NewSystem IAM managed client before production login is expected to work end-to-end.
+```text
+User
+  |
+  v
+Vue.js Frontend
+  |
+  | REST API
+  v
+FastAPI Backend
+  |
+  +-------------------+
+  |                   |
+  v                   v
+MongoDB          Google Gemini API
+                      |
+                      v
+             AI / Document Processing
